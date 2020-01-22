@@ -23,11 +23,11 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class ASV {
-	 SharedPreferences prefs = mock(SharedPreferences.class);
-	 Context context = mock(Context.class);
+	 private SharedPreferences prefs = mock(SharedPreferences.class);
+	 private Context context = mock(Context.class);
 
 	@Before
-	public void before() throws Exception {
+	public void before(){
 		this.prefs = mock(SharedPreferences.class);
 		this.context = mock(Context.class);
 		when(context.getSharedPreferences(anyString(), anyInt())).thenReturn(prefs);
